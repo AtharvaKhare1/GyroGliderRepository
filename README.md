@@ -147,10 +147,10 @@ float kd = 0.05; // Derivative gain
 
 ## 👥 Team
 
-- **Soham Kute** - sohamuk87@gmail.com
-- **Atharva Khare** - atharvakhare707@gmail.com  
-- **Ameya Tikhe** - ameya.tikheofficial@gmail.com
-- **Kesar Sutar** - Kesarsuthar4716@gmail.com
+- **Soham Kute** 
+- **Atharva Khare** 
+- **Ameya Tikhe** 
+- **Kesar Sutar** 
 
 ### Mentors
 - **Shankari Anandakrishnan**
