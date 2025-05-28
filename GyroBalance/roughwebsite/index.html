@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PID TUNER</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <script>
+       
+        let minTermValue = null;
+        let maxTermValue = null;
+        let pValue = null;
+        let iValue = null;
+        let dValue = null;
+
+        function storeAllValues(event) {
+            if (event.key === "Enter") {
+                let inputs = document.querySelectorAll(".inbox, .takebox");
+        
+                // Loop through all input elements
+                inputs.forEach(inputElement => {
+                    let inputValue = inputElement.value;
+        
+                    if (inputElement.classList.contains("inbox")) {
+                        let intValue = parseInt(inputValue);
+        
+                        if (!isNaN(intValue) && intValue >= 0 && intValue <= 2047) {
+                            if (inputElement.id === "intmin") {
+                                minTermValue = intValue;
+                                console.log("MIN_TERM value stored:", minTermValue);
+                            } else if (inputElement.id === "intmax") {
+                                maxTermValue = intValue;
+                                console.log("MAX_TERM value stored:", maxTermValue);
+                            }
+                        } else if (inputValue !== "") {
+                            alert("Please enter a value from 0 to 2047.");
+                        }
+        
+                    } else if (inputElement.classList.contains("takebox")) {
+                        let floatValue = parseFloat(inputValue);
+        
+                        if (!isNaN(floatValue)) {
+                            if (inputElement.id === "p") {
+                                pValue = floatValue;
+                                console.log("Kp value stored:", pValue);
+                            } else if (inputElement.id === "i") {
+                                iValue = floatValue;
+                                console.log("Ki value stored:", iValue);
+                            } else if (inputElement.id === "d") {
+                                dValue = floatValue;
+                                console.log("Kd value stored:", dValue);
+                            }
+                        } else if (inputValue !== "") {
+                            alert("Please enter an appropriate value.");
+                        }
+                    }
+        
+                    // Add highlight effect to all inputs that have a value
+                    if (inputValue !== "") {
+                        inputElement.classList.add("highlight");
+                        setTimeout(() => {
+                            inputElement.classList.remove("highlight");
+                        }, 200);
+                    }
+                });
+            }
+        }
+        
+        // Add event listeners after the DOM content has loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".inbox, .takebox").forEach(input => {
+                input.addEventListener("keydown", storeAllValues);
+            });
+        }); 
+        
+    </script>
+</head>
+<body>
+    <div class="block" id="one">
+        <div class="input" id="speedin">
+            <div class="term" id="mintermin">
+                <div class="box" id="mintermbox"><input type="number" class="inbox" id="intmin" placeholder="00">
+                </div>
+            </div>
+            <div class="term" id="maxtermin">
+                <div class="box" id="maxtermbox"><input type="number" class="inbox" id="intmax" placeholder="00">
+                </div>
+            </div>
+        </div>
+        <div class="label" id="speedlab">
+            <div class="lab" id="mintermlab">
+                <div id="minterm1">MIN_TERM</div>
+            </div>
+            <div class="lab" id="maxtermlab">
+                <div id="maxterm1">MAX_TERM</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block" id="two">
+        <div class="take" id="pidin">
+            <div class="term" id="pin">
+                <div class="box" id="pbox"><input type="number" class="takebox" id="p" placeholder="0.00" step="0.01">
+                </div>
+            </div>
+            <div class="term" id="iin">
+                <div class="box" id="ibox"><input type="number" class="takebox" id="i" placeholder="0.00" step="0.01">
+                </div>
+            </div>
+            <div class="term" id="din">
+                <div class="box" id="dbox"><input type="number" class="takebox" id="d" placeholder="0.00" step="0.01">
+                </div>
+            </div>
+        </div>
+        <div class="name" id="pidname">
+            <div class="nam" id="pnam">
+                <div id="minterm1">Kp</div>
+            </div>
+            <div class="nam" id="inam">
+                <div class="box" id="maxtermbox">Ki</div>
+            </div>
+            <div class="nam" id="dnam">
+                <div class="box" id="maxtermbox">Kd</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

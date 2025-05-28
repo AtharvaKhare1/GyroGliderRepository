@@ -1,0 +1,124 @@
+/* General reset for margin and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: black;
+    font-family: Roboto;
+}
+
+/* Block styles */
+.block {
+    margin: 1%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Individual block styling */
+#one, #two {
+    height: 10vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    background-color: #282828;
+}
+
+#two {
+    background-color: white;
+}
+
+/* Input and take styles */
+.input, .take {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input {
+    background-color: #282828;
+    color: whitesmoke;
+}
+
+.take {
+    background-color: white;
+    color: #e56717;
+}
+
+/* Input box styles */
+.inbox, .takebox {
+    width: 18vw;
+    height: 8vw;
+    font-size: 6em;
+    border: none;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
+/* Specific styles for inbox and takebox */
+.inbox {
+    background-color: #282828;
+    color: whitesmoke;
+}
+
+.takebox {
+    background-color: white;
+    color: #e56717;
+}
+
+/* Remove the border and arrows */
+
+input.inbox, input.takebox {
+    border: none;
+    outline: none;
+    /*-moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Highlight and change classes */
+.highlight, .change {
+    color: transparent;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+
+/* Label and name styles */
+.label, .name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 600;
+    transition: font-size 0.3s ease;
+}
+
+.label {
+    background-color: #282828;
+    color: #a6a6a6;
+}
+
+.name {
+    background-color: white;
+    color: #f88158;
+}
+
+/* Hover effects */
+.label:hover, .name:hover {
+    font-size: 1.2em;
+}

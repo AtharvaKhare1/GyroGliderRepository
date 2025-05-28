@@ -1,0 +1,50 @@
+# Build artifacts (C/C++ and ESP-IDF)
+build/
+*.elf
+*.bin
+*.hex
+*.map
+*.log
+*.d
+*.o
+*.a
+
+# ESP-IDF configuration
+sdkconfig
+sdkconfig.old
+
+# Python cache (for YoloV8 or any Python scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code and JetBrains IDEs
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# SolidWorks files (generated/backup files)
+*.sldprt
+*.sldasm
+*.slddrw
+*.SLD*
+*.bak
+*.swp
+
+# Node/npm-related (for WebSocket project)
+node_modules/
+.env
+package-lock.json
+
+# Logs and temporary files
+*.tmp
+*.bak
+*.swp
+*.~*
+
+# Output folders (if any)
+dist/
+out/

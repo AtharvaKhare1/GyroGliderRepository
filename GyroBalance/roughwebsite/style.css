@@ -1,0 +1,169 @@
+html{
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overfloW-y: hidden;
+    background-color: black;
+    font-family: Roboto;
+}
+
+.block{
+    margin: 1%;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+#one{
+    height: 10vw;
+    align-items: center;
+    background-color: #282828;
+    justify-content: center;
+}
+
+#two{
+    height: 10vw;
+    align-items: center;
+    background-color: white;
+    justify-content: center;   
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    background-color: #282828;
+    align-items: center;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+
+.take{
+    width: 100%;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    color: whitesmoke;
+}
+
+.inbox{
+    width: 18vw;
+    height: 8vw;
+    font-size: 6em;
+    background-color: #282828;
+    border: none;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 900;
+    transition: color 0.3s ease;
+    transition: weight 0.3s ease;
+}
+
+/* Remove the border and the arrows */
+input.inbox {
+    border: none;
+    outline: none;
+    /*-moz-appearance: textfield; /* Firefox */
+}
+
+input.inbox::-webkit-inner-spin-button,
+input.inbox::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Optional: Add custom styling for the input */
+input.inbox {
+    background-color: transparent; 
+}
+
+.highlight {
+    color: transparent;
+    font-weight: 800;
+    transition: color 0.3s ease;
+    transition: weight 0.3s ease;
+}
+
+.change{
+    color: red;
+    background-color: aqua;
+    font-weight: 800;
+    transition: color 0.3s ease;
+    transition: weight 0.3s ease;
+}
+
+.takebox{
+    width: 18vw;
+    height: 8vw;
+    font-size: 6em;
+    background-color: white;
+    border: none;
+    color: #e56717;
+    text-align: center;
+    font-family: Roboto;
+    font-weight: 900;
+}
+
+/* Remove the border and the arrows */
+input.takebox {
+    border: none;
+    outline: none;
+    /*-moz-appearance: textfield; /* Firefox */
+}
+
+input.takebox::-webkit-inner-spin-button,
+input.takebox::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Optional: Add custom styling for the input */
+input.takebox {
+    background-color: transparent; 
+}
+
+.label{
+    width: 100%;
+    background-color: #282828;
+    display: flex;
+    color: #a6a6a6;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 600;
+    transition: font-size 0.3s ease;
+}
+
+.name{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    color: #f88158;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Roboto;
+    font-size: 1em;
+    font-weight: 600;
+    transition: font-size 0.3s ease;
+}
+
+.label:hover{
+    font-size: 1.2em;
+    transition: font-size 0.3s ease;
+}
+
+.name:hover{
+    font-size: 1.2em;
+    transition: font-size 0.3s ease;
+}
